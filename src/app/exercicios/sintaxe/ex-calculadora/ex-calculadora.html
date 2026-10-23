@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="form-box">
+    <!--chamando o metodo calcularResultados(), no forms atraves (ngSubmit)-->
+    <form #frm="ngForm" (ngSubmit)="calcularResultados()">
+      <h2>calculadora</h2>
+      <!--INPUT DO PRIMEIRO NUMERO-->
+      <label for="numero1">número 1</label>
+      <input type="number" name="numero1" id="numero1"  [(ngModel)]="numero1" >
+
+      <!--INPUT DO SEGUNDO NUMERO-->
+      <label for="numero2">número 2</label>
+      <input type="number" name="numero2" id="numero2" [(ngModel)]="numero2">
+
+      <button type="submit">somar</button>
+    </form>
+
+
+    <!--iniciando a estrutura condicional-->
+    @if(resultado){
+      <!--DIV RESULTADO-->
+      <div class="result-display">
+        <p>Soma: <span id="result">{{ resultado }}</span></p>
+        <p>Produto: <span id="result">{{ produto }}</span></p>
+        <p>Quociente (Divisão Inteira): <span id="result">{{ quociente }}</span></p>
+        <p>Resto da Divisão: <span id="result">{{ resto }}</span></p>
+      </div>
+    }@else {
+      <div class="result-display">
+        <p>Seu resultado aparecerá aqui.</p>
+      </div>
+    }
+  </div>
+</div>
