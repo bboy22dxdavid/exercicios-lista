@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="form-box">
+    <!--chamando o metodo calcularResultados(), no forms atraves (ngSubmit)-->
+    <form   [formGroup]="formSucessor" (ngSubmit)="Resultados()">
+      <h2>sucessor</h2>
+      <!--INPUT DO PRIMEIRO NUMERO-->
+      <label NgFor="numero">Digite um Numero:</label>
+      <input type="number" name="numero" id="numero"  formControlName="numero" >
+
+
+
+      <button class="btn-buton" type="submit"  [disabled]="formSucessor.invalid">verificar</button>
+    </form>
+
+
+    <!--iniciando a estrutura condicional-->
+    @if(resultado){
+      <!--DIV RESULTADO-->
+      <div class="result-display">
+        <p>Resultado: <span id="result">{{ resultado }}</span></p>
+      </div>
+    }@else {
+      <div class="result-display">
+        <p>Seu resultado aparecerá aqui.</p>
+      </div>
+    }
+  </div>
+</div>

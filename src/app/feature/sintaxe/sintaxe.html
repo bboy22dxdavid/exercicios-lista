@@ -1,1 +1,22 @@
-<p>sintaxe works!</p>
+<div class="container">
+
+  <!-- Contêiner semântico de navegação -->
+  <div class="form-box">
+    <h2>lista de exercicios de sentaxe</h2>
+    <nav class="nav-container">
+
+      <button  routerLink="/sucessor" routerLinkActive="active-btn" class="nav-btn btn">
+        sucessor
+      </button>
+
+
+
+    </nav>
+  </div>
+
+   <!-- O conteúdo da página ativa será renderizado aqui -->
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
