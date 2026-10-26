@@ -8,6 +8,7 @@ import { ExSucessor } from './exercicios/sintaxe/ex-sucessor/ex-sucessor';
 import { ExVariavelPrimitiva } from './exercicios/sintaxe/ex-variavel-primitiva/ex-variavel-primitiva';
 import { ExCalculadora } from './exercicios/sintaxe/ex-calculadora/ex-calculadora';
 import { ExCalculadoraCigarro } from './exercicios/sintaxe/ex-calculadora-cigarro/ex-calculadora-cigarro';
+import { ExTriangulos } from './exercicios/condicionalI/ex-triangulos/ex-triangulos';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'cigarro', component:  ExCalculadoraCigarro},
   { path: 'repeticao', component: Repeticao },
   { path: 'condicionalI', component: CondicionalI },
+  { path: 'triangulo', component: ExTriangulos },
   { path: 'condicionalII', component: CondicionalII },
   { path: '', redirectTo: '/home', pathMatch: 'full' } // Redirecionamento padrão
 

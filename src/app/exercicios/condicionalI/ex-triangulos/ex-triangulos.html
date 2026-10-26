@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="form-box">
+    <!--chamando o metodo calcularResultados(), no forms atraves (ngSubmit)-->
+    <form #frm="ngForm" (ngSubmit)="calcularResultados()">
+      <h2>calculadora</h2>
+      <!--INPUT DO PRIMEIRO NUMERO X-->
+      <label for="numeroX">Digite o valor de X: </label>
+      <input type="number" name="numeroX" id="numeroX"  [(ngModel)]="numeroX" >
+
+      <!--INPUT DO SEGUNDO NUMERO Y-->
+      <label for="numeroY">Digite o valor de X:</label>
+      <input type="number" name="numeroY" id="numeroY" [(ngModel)]="numeroY">
+
+      <!--INPUT DO SEGUNDO NUMERO Z-->
+      <label for="numeroZ">Digite o valor de Z:</label>
+      <input type="number" name="numeroZ" id="numeroZ" [(ngModel)]="numeroZ">
+
+      <button type="submit">verificar</button>
+    </form>
+
+
+    <!--iniciando a estrutura condicional-->
+    @if(resultado){
+      <!--DIV RESULTADO-->
+      <div class="result-display">
+        <p> <span id="result">{{ resultado }}</span></p>
+
+      </div>
+    }@else {
+      <div class="result-display">
+        <p>Seu resultado aparecerá aqui.</p>
+      </div>
+    }
+  </div>
+</div>
+
